@@ -26,13 +26,11 @@ func main() {
 }
 
 func ConnectRedis() {
-	log.Print("BOO")
 	c, err := redis.DialURL(os.Getenv("REDIS_URL"))
 	if err != nil {
 		// handle connection error
 		log.Fatal(err.Error())
 	}
-	log.Print("YIPPEE")
 
 	defer c.Close()
 

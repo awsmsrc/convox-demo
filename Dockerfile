@@ -11,6 +11,7 @@ RUN go get github.com/garyburd/redigo/redis
 
 WORKDIR /go/src/github.com/usr/app
 COPY . /go/src/github.com/usr/app
+RUN ls -la
 RUN go get .
 
 ENV PORT 5000
