@@ -1,0 +1,13 @@
+web:
+  build: .
+  ports:
+    - 80:5000
+  command: app
+  links:
+    - redis
+
+redis:
+  image: convox/redis
+  ports:
+    - 6379
+
